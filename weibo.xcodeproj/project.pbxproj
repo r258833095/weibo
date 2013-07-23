@@ -17,17 +17,12 @@
 		09E922901799364000EA1FFE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E9228F1799364000EA1FFE /* Default@2x.png */; };
 		09E922921799364000EA1FFE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E922911799364000EA1FFE /* Default-568h@2x.png */; };
 		09E922951799364000EA1FFE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E922931799364000EA1FFE /* MainStoryboard.storyboard */; };
-		09E922981799364000EA1FFE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E922971799364000EA1FFE /* FirstViewController.m */; };
-		09E9229A1799364000EA1FFE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E922991799364000EA1FFE /* first.png */; };
-		09E9229C1799364000EA1FFE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E9229B1799364000EA1FFE /* first@2x.png */; };
-		09E9229F1799364000EA1FFE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9229E1799364000EA1FFE /* SecondViewController.m */; };
-		09E922A11799364000EA1FFE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E922A01799364000EA1FFE /* second.png */; };
-		09E922A31799364000EA1FFE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E922A21799364000EA1FFE /* second@2x.png */; };
 		09E922AB1799364100EA1FFE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E922AA1799364100EA1FFE /* SenTestingKit.framework */; };
 		09E922AC1799364100EA1FFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9227B1799364000EA1FFE /* UIKit.framework */; };
 		09E922AD1799364100EA1FFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9227D1799364000EA1FFE /* Foundation.framework */; };
 		09E922B51799364100EA1FFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E922B31799364100EA1FFE /* InfoPlist.strings */; };
 		09E922B81799364100EA1FFE /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E922B71799364100EA1FFE /* weiboTests.m */; };
+		09E922C41799409600EA1FFE /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E922C31799409600EA1FFE /* HomeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,20 +50,14 @@
 		09E9228F1799364000EA1FFE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		09E922911799364000EA1FFE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		09E922941799364000EA1FFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		09E922961799364000EA1FFE /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		09E922971799364000EA1FFE /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		09E922991799364000EA1FFE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		09E9229B1799364000EA1FFE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		09E9229D1799364000EA1FFE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		09E9229E1799364000EA1FFE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		09E922A01799364000EA1FFE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		09E922A21799364000EA1FFE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		09E922A91799364100EA1FFE /* weiboTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weiboTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E922AA1799364100EA1FFE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		09E922B21799364100EA1FFE /* weiboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "weiboTests-Info.plist"; sourceTree = "<group>"; };
 		09E922B41799364100EA1FFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09E922B61799364100EA1FFE /* weiboTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weiboTests.h; sourceTree = "<group>"; };
 		09E922B71799364100EA1FFE /* weiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weiboTests.m; sourceTree = "<group>"; };
+		09E922C21799409600EA1FFE /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		09E922C31799409600EA1FFE /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,17 +117,10 @@
 		09E922811799364000EA1FFE /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				09E922C11799405500EA1FFE /* Home */,
 				09E9228A1799364000EA1FFE /* AppDelegate.h */,
 				09E9228B1799364000EA1FFE /* AppDelegate.m */,
 				09E922931799364000EA1FFE /* MainStoryboard.storyboard */,
-				09E922961799364000EA1FFE /* FirstViewController.h */,
-				09E922971799364000EA1FFE /* FirstViewController.m */,
-				09E922991799364000EA1FFE /* first.png */,
-				09E9229B1799364000EA1FFE /* first@2x.png */,
-				09E9229D1799364000EA1FFE /* SecondViewController.h */,
-				09E9229E1799364000EA1FFE /* SecondViewController.m */,
-				09E922A01799364000EA1FFE /* second.png */,
-				09E922A21799364000EA1FFE /* second@2x.png */,
 				09E922821799364000EA1FFE /* Supporting Files */,
 			);
 			path = weibo;
@@ -175,6 +157,15 @@
 				09E922B31799364100EA1FFE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09E922C11799405500EA1FFE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				09E922C21799409600EA1FFE /* HomeView.h */,
+				09E922C31799409600EA1FFE /* HomeView.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +244,6 @@
 				09E922901799364000EA1FFE /* Default@2x.png in Resources */,
 				09E922921799364000EA1FFE /* Default-568h@2x.png in Resources */,
 				09E922951799364000EA1FFE /* MainStoryboard.storyboard in Resources */,
-				09E9229A1799364000EA1FFE /* first.png in Resources */,
-				09E9229C1799364000EA1FFE /* first@2x.png in Resources */,
-				09E922A11799364000EA1FFE /* second.png in Resources */,
-				09E922A31799364000EA1FFE /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +280,7 @@
 			files = (
 				09E922881799364000EA1FFE /* main.m in Sources */,
 				09E9228C1799364000EA1FFE /* AppDelegate.m in Sources */,
-				09E922981799364000EA1FFE /* FirstViewController.m in Sources */,
-				09E9229F1799364000EA1FFE /* SecondViewController.m in Sources */,
+				09E922C41799409600EA1FFE /* HomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "weibo/weibo-Prefix.pch";
 				INFOPLIST_FILE = "weibo/weibo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "weibo/weibo-Prefix.pch";
 				INFOPLIST_FILE = "weibo/weibo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -475,6 +463,7 @@
 				09E922BD1799364100EA1FFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09E922BE1799364100EA1FFE /* Build configuration list for PBXNativeTarget "weiboTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +472,7 @@
 				09E922C01799364100EA1FFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

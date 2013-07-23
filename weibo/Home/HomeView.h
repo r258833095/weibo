@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  HomeView.h
 //  weibo
 //
 //  Created by 斌 on 13-7-19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface HomeView : UITableViewController
 
 @end
