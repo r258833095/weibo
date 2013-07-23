@@ -7,12 +7,26 @@
 //
 
 #import "AppDelegate.h"
-
+#import <ShareSDK/ShareSDK.h>
+#import "WBApi.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    [ShareSDK registerApp:@"5fa4090d522"];
+    
+    [ShareSDK connectSinaWeiboWithAppKey:@"3188745070"
+                               appSecret:@"f9e985edf291ac408dd04fcd1692cbcb"
+                             redirectUri:@"http://uibear.com"];
+    
+    [ShareSDK connectTencentWeiboWithAppKey:@"801387334"
+                                  appSecret:@"e0c6f2f8d343de754283e4d4632cc19a"
+                                redirectUri:@"http://uibear.com"
+                                   wbApiCls:[WBApi class]];
+
+
     return YES;
 }
 							
