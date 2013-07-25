@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface HomeView : UITableViewController{
     
+
     NSArray *contentAr;
     NSMutableArray *imageAr;
 }

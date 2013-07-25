@@ -10,6 +10,6 @@
 
 @interface HttpRequest : NSObject
 
-+(NSString*)getUrlWithStr:(NSString*)urlStr;
++(NSString*)getUrlWithResponse:(BOOL)runRequest serverAddr:(NSString*)serverAddr datagramKey:(NSString*)datagramKey datagramDic:(NSDictionary*)datagramDic;
 
 @end

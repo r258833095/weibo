@@ -7,7 +7,6 @@
 //
 
 #import "WeiboCell.h"
-
 @implementation WeiboCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -25,5 +24,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserView : UITableViewController
+@interface UserView : UITableViewController{
+
+    IBOutlet UIImageView *image;
+    IBOutlet UILabel *screenName;
+    IBOutlet UILabel *name;
+    IBOutlet UILabel *statusesCount;
+    IBOutlet UILabel *friendsCount;
+    IBOutlet UILabel *followersCount;
+}
 
 @end

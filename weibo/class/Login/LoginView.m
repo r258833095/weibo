@@ -46,6 +46,8 @@
 
 - (IBAction)login:(id)sender {
     
+    //背景图
+//    [self.view setBackgroundColor:[UIColor  colorWithPatternImage:[UIImage imageNamed:@"bg.png"]]];
     
     int weiboType =[sender tag];
     

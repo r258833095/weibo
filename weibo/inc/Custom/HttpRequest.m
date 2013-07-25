@@ -11,26 +11,39 @@
 
 @implementation HttpRequest
 
-+(NSString*)getUrlWithStr:(NSString*)urlStr{
++(NSString*)getUrlWithResponse:(BOOL)runRequest serverAddr:(NSString*)serverAddr datagramKey:(NSString*)datagramKey datagramDic:(NSDictionary*)datagramDic{
     
-     urlStr=[urlStr stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingUTF8)];
-     
-     NSURL *url = [NSURL URLWithString:urlStr];
-     
-     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-     request.timeOutSeconds=50;
-     request.shouldAttemptPersistentConnection = NO;
-     request.defaultResponseEncoding = NSUTF8StringEncoding;
-     [request startSynchronous];
-     
-     NSError *error = [request error];
-     if (!error) {
-         NSString *response = [request responseString];
-         return response;
-     
-     }else{
-         return @"err";
-     }
+    NSString *urlStr=[NSString stringWithFormat:@"%@%@?",serverAddr,datagramKey];
+    
+    for (id key in datagramDic)
+    {
+        urlStr=[urlStr stringByAppendingFormat:@"&%@=%@",key,[datagramDic objectForKey:key]];
+    }
+    
+    urlStr=[urlStr stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingUTF8)];
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    request.timeOutSeconds=50;
+    request.shouldAttemptPersistentConnection = NO;
+    request.defaultResponseEncoding = NSUTF8StringEncoding;
+    
+    if (runRequest) {
+        [request startAsynchronous];
+    }else{
+        [request startSynchronous];
+    }
+    
+    
+    NSError *error = [request error];
+    if (!error) {
+        NSString *response = [request responseString];
+        return response;
+        
+    }else{
+        return @"err";
+    }
     
 }
 

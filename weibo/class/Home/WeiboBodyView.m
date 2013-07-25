@@ -7,7 +7,7 @@
 //
 
 #import "WeiboBodyView.h"
-
+#import "STTweetLabel.h"
 @interface WeiboBodyView ()
 
 @end
@@ -32,12 +32,47 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"%@",dataDic);
+
     image.image=[dataDic objectForKey:@"image"];
     name.text=[dataDic objectForKey:@"name"];
     screenName.text=[dataDic objectForKey:@"screenName"];
-    text.text=[dataDic objectForKey:@"text"];
     time.text=[dataDic objectForKey:@"time"];
+    
+    
+    UIFont *theFont =[UIFont systemFontOfSize:15];
+    CGSize feelSize = [[dataDic objectForKey:@"text"] sizeWithFont:theFont constrainedToSize:CGSizeMake(280.0,0)];
+    float  feelHeight = feelSize.height;
+    STTweetLabel *_tweetLabel = [[STTweetLabel alloc] initWithFrame:CGRectMake(20.0, 63.0, 280.0, feelHeight)];
+    [_tweetLabel setFont:theFont];
+    [_tweetLabel setTextColor:[UIColor blackColor]];
+    [_tweetLabel setText:[dataDic objectForKey:@"text"]];
+    
+    STLinkCallbackBlock callbackBlock = ^(STLinkActionType actionType, NSString *link) {
+        
+        NSString *displayString = NULL;
+        
+        switch (actionType) {
+                
+            case STLinkActionTypeAccount:
+                displayString = [NSString stringWithFormat:@"Twitter account:\n%@", link];
+                break;
+                
+            case STLinkActionTypeHashtag:
+                displayString = [NSString stringWithFormat:@"Twitter hashtag:\n%@", link];
+                break;
+                
+            case STLinkActionTypeWebsite:
+                displayString = [NSString stringWithFormat:@"Website:\n%@", link];
+                break;
+        }
+        
+        NSLog(@"%@",displayString);
+        
+    };
+    
+    [_tweetLabel setCallbackBlock:callbackBlock];
+    
+    [self.view addSubview:_tweetLabel];
     
     [super viewWillAppear:animated];
 }
@@ -52,7 +87,6 @@
     image = nil;
     name = nil;
     screenName = nil;
-    text = nil;
     time = nil;
     [super viewDidUnload];
 }

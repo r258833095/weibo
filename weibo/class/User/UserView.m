@@ -8,6 +8,13 @@
 
 #import "UserView.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import "Header.h"
+#import "HttpRequest.h"
+#import "JSONKit.h"
+
+#import "ImgDownload.h"
+
 @interface UserView ()
 
 @end
@@ -27,11 +34,27 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+
+    
+    NSDictionary *dataDic=[[NSDictionary alloc]initWithObjectsAndKeys:
+                         [[ShareSDK getCredentialWithType:ShareTypeSinaWeibo].sourceData objectForKey:@"access_token"],@"access_token",
+                         [[ShareSDK getCredentialWithType:ShareTypeSinaWeibo].sourceData objectForKey:@"uid"],@"uid",nil];
+    
+    NSString *response=[HttpRequest getUrlWithResponse:NO serverAddr:SERVER_ADDR_HTTP_SINA datagramKey:SINA_USERS_SHOW datagramDic:dataDic];
+    NSDictionary *contentDic=[response objectFromJSONStringWithParseOptions:JKParseOptionLooseUnicode];
+    
+    image.image=[ImgDownload getUrlStrWithSynchronous:[contentDic objectForKey:@"profile_image_url"]];
+    screenName.text=[contentDic objectForKey:@"screen_name"];
+    name.text=[NSString stringWithFormat:@"@%@",[contentDic objectForKey:@"name"]];
+    statusesCount.text=[NSString stringWithFormat:@"%@",[contentDic objectForKey:@"statuses_count"]];
+    friendsCount.text=[NSString stringWithFormat:@"%@",[contentDic objectForKey:@"friends_count"]];
+    followersCount.text=[NSString stringWithFormat:@"%@",[contentDic objectForKey:@"followers_count"]];
+
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,4 +141,13 @@
      */
 }
 
+- (void)viewDidUnload {
+    image = nil;
+    screenName = nil;
+    name = nil;
+    statusesCount = nil;
+    friendsCount = nil;
+    followersCount = nil;
+    [super viewDidUnload];
+}
 @end

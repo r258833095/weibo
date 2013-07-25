@@ -13,7 +13,7 @@
     IBOutlet UIImageView *image;
     IBOutlet UILabel *screenName;
     IBOutlet UILabel *name;
-    IBOutlet UITextView *text;
+
     IBOutlet UILabel *time;
     
 
